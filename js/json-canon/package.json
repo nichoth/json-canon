@@ -3,8 +3,22 @@
   "version": "1.0.1",
   "description": "Serialize JSON into a canonical format.",
   "main": "src/index.js",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": {
+      "import": "./dist/*.js",
+      "require": "./dist/*.cjs"
+    }
+  },
   "scripts": {
     "test": "ava",
+    "build": "mkdir -p ./dist && rm -rf ./dist/* && tsc --project tsconfig.build.json && npm run build:min:esm",
+    "build-cjs": "esbuild src/*.ts --format=cjs --keep-names --bundle --outdir=./dist --out-extension:.js=.cjs",
+    "postversion": "git push --follow-tags",
     "bench": "node bench"
   },
   "repository": {

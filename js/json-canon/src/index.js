@@ -4,7 +4,7 @@ module.exports = serialize
  * @param {unknown} value
  * @returns {string}
  */
-function serialize(value) {
+function serialize (value) {
   const type = typeof value
 
   switch (type) {

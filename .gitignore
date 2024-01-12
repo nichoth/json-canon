@@ -2,3 +2,4 @@ node_modules
 npm-debug.log*
 /test-data/generated
 /target
+js/json-canon/**/*.js
