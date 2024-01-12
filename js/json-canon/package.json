@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/ahdinosaur/json-canon#readme",
   "devDependencies": {
+    "ava": "^6.0.1",
     "benchmark": "^2.1.4",
     "canonicalize": "^2.0.0",
     "fast-json-stable-stringify": "latest",
