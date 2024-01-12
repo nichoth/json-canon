@@ -1,10 +1,8 @@
-module.exports = serialize
-
 /**
  * @param {unknown} value
  * @returns {string}
  */
-function serialize (value) {
+export function serialize (value) {
   const type = typeof value
 
   switch (type) {
@@ -39,6 +37,8 @@ function serialize (value) {
 
   return serializeObject(value)
 }
+
+export default serialize
 
 function serializeUndefined() {
   return 'null'

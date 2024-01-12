@@ -17,6 +17,7 @@
     "noImplicitAny": false,
     "sourceMap": true,
     "declaration": true,
+    "emitDeclarationOnly": true,
     "declarationDir": "dist",
     "declarationMap": true
   },
